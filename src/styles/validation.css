@@ -1,0 +1,18 @@
+input.valid {
+  border-color: var(--color-success);
+  background-color: whitesmoke;
+}
+
+input.invalid {
+  border-color: var(--color-error);
+	  background-color: whitesmoke;
+}
+
+/* Сообщение об ошибке */
+.error-message {
+  display: block;
+  color: var(--color-error);
+  font-size: 13px;
+  margin-top: 6px;
+  margin-left: 16px;
+}

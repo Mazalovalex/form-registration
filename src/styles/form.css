@@ -1,0 +1,192 @@
+.formSection {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Контейнер формы (левая часть) */
+.containerFormSection {
+  background: rgba(211, 211, 211, 0.15);
+  border-radius: var(--radius);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  padding: var(--spacing-xl);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 500px;
+  max-width: 800px;
+  margin: auto auto;
+  height: max-content;
+
+  /* эффект стекла */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  color: var(--color-text);
+}
+
+.formRegistrations {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  position: relative;
+}
+
+/* ========================================
+   LABEL
+   ======================================== */
+label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+/* ========================================
+   INPUT
+   ======================================== */
+input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: 40px;
+  font-size: 16px;
+  font-family: inherit;
+  color: var(--color-text);
+  transition: all var(--transition);
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.1);
+}
+
+input:hover:not(:focus) {
+  border-color: var(--color-primary);
+}
+
+input::placeholder {
+  color: var(--color-text-light);
+}
+
+/* ========================================
+   BUTTON
+   ======================================== */
+.buttonSubmit {
+  width: 100%;
+  padding: 14px;
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: 40px;
+  font-size: 16px;
+  font-weight: 300;
+  cursor: pointer;
+  transition: all var(--transition);
+  margin-top: var(--spacing-md);
+}
+
+.buttonSubmit:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.buttonSubmit:active {
+  transform: translateY(0);
+}
+
+.buttonSubmit:disabled {
+  background: var(--color-border);
+  cursor: not-allowed;
+  transform: none;
+}
+/*
+* Пароль 
+**/
+
+/* Требования к паролю */
+.password-requirements {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 5px;
+  column-gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0 16px;
+  font-size: 12px;
+}
+
+.password-requirements li {
+  color: white;
+  margin: 4px 0;
+  transition: color 0.3s ease;
+}
+
+.password-requirements li::before {
+  content: "○ ";
+  margin-right: 6px;
+}
+
+.password-requirements li.valid {
+  color: var(--color-success);
+}
+
+.password-requirements li.valid::before {
+  content: "✓ ";
+}
+
+/* Обертка для пароля с кнопкой */
+.password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* Кнопка показать/скрыть пароль */
+.password-toggle {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  color: var(--color-text-light);
+  transition: color var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.password-toggle:hover {
+  color: var(--color-primary);
+}
+
+/* Иконки глаза */
+.eye-icon {
+  width: 20px;
+  height: 20px;
+  stroke-width: 2;
+}
